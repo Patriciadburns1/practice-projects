@@ -16,6 +16,10 @@ function randomizeMole(){
 //pauls animation will be running and timed randomly 
 }
 
+function popUpAnimation () {
+    console.log('popUpAnimation()')
+    $('.mole').toggleClass('slide_animation');
+}
 
 function winStatus(){
 // when the user clicks the mole, some kind of alert 

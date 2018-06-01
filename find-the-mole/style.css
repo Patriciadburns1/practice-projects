@@ -14,12 +14,24 @@ body {
     width: 100vw;
     position: relative;
 }
+
 .mole {
     height: 25%;
     width: 25%;
     background-image: url("images/mole.png");
     background-repeat: no-repeat;
     position: absolute;
+}
+
+.slide_animation {
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+@keyframes slide {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(-50px)}
+    100% {transform: translateY(0)}
 }
 
 .dirt {
