@@ -1,13 +1,19 @@
 $(document).ready(initializeApp);
 
-
+var player;
+var score = 0;
 
 function initializeApp(){
-console.log ('this is working' )
+clickHanlders();
 }
 
 function clickHanlders(){
 //onclick for when the user clicks the mole and wins 
+    $('.container>.mole').on('click', function() {
+        score++
+        winStatus
+    });
+    $('.resetBtn').on('click', resetGame);
 }
 
 
@@ -17,6 +23,9 @@ function randomizeMole(){
 
 
 function winStatus(){
+    if (score === 1){
+        alert('you won!')
+    }
 // when the user clicks the mole, some kind of alert 
 }
 
