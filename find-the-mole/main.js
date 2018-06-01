@@ -4,8 +4,8 @@ var player;
 var score = 0;
 
 function initializeApp(){
-clickHanlders();
-showMole(); 
+clickHandlers();
+initiateMole(); 
 }
 
 function clickHandlers(){
@@ -38,18 +38,21 @@ function resetGame(){
 // once the game is over, reset all variables to 0 and start the game over again
 }
 
-function getRandomNumber(min, max) {
-   return (Math.floor(Math.random() * (max-min + 1))); 
-}
+// function getRandomNumber(min, max) {
+//    return (Math.floor(Math.random() * (max-min + 1))); 
+// }
 
+function getRandomNumber(min, max) {
+    return (Math.floor( Math.random() * ( max - min )  ) + min + 1 ); 
+ }
 
 function popUpAnimation(){
     console.log("pop UP animation is firing"); 
 }
 
 
-function initiateMole(element, minTime, maxTime){
-    element = $(element);
+function initiateMole( minTime, maxTime){
+    var element = $(".mole");
     var nextTime = getRandomNumber(minTime, maxTime);
     var timer = null;
     
@@ -63,5 +66,6 @@ function initiateMole(element, minTime, maxTime){
     timer = setTimeout( toggleState, nextTime );//start the first timeout
   }
   
-// initiateMole(".mole",500,1000); 
-// initiateMole(".mole",500,2000); 
+initiateMole(2000,3000); 
+// initiateMole(500,2000); 
+initiateMole(2000,3000); 
