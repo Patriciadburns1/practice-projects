@@ -34,8 +34,18 @@ body {
 .dirt {
     height: 100%;
     width: 100%;
-    background-image: url('images/pileofdirt.png');
-    background-size: 100vh;
-    background-position: center;
     position: absolute;
+}
+.resetBtn {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+}
+
+.scoreText {
+    font-size: 3rem;
+    color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

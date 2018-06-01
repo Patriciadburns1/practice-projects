@@ -4,8 +4,9 @@ var player;
 var score = 0;
 
 function initializeApp(){
-clickHanlders();
+clickHandlers();
 showMole(); 
+displayScore();
 }
 
 function clickHandlers(){
@@ -35,6 +36,8 @@ function winStatus(){
 }
 
 function resetGame(){
+    score = 0;
+    $('.scoreText').text('0');
 // once the game is over, reset all variables to 0 and start the game over again
 }
 
@@ -42,5 +45,9 @@ function showMole () {
    var randomNumber= [Math.floor(Math.random() * 4)];
    randomNumber= randomNumber + 1000; 
     setTimeout(popUpAnimation,randomNumber);
+}
+
+function displayScore(){
+    $('.scoreText').text(score);
 }
 
