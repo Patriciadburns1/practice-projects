@@ -5,7 +5,7 @@ var score = 0;
 
 function initializeApp(){
 clickHandlers();
-initiateMole(); 
+initiateMole(200,500); 
 }
 
 function clickHandlers(){
@@ -57,7 +57,7 @@ function initiateMole( minTime, maxTime){
     var timer = null;
     
     
-    function toggleState(){
+    function toggleState(){ 
       element.toggleClass('slide_animation');
       nextTime = getRandomNumber(minTime, maxTime);
       timer = setTimeout( toggleState, nextTime );//each successive timeout
@@ -66,6 +66,6 @@ function initiateMole( minTime, maxTime){
     timer = setTimeout( toggleState, nextTime );//start the first timeout
   }
   
-initiateMole(2000,3000); 
+
 // initiateMole(500,2000); 
-initiateMole(2000,3000); 
+// initiateMole(2000,3000); 

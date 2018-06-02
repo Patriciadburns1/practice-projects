@@ -4,9 +4,13 @@ body {
     background-size: 100vw; 
     /* width: 100vw;    */
 }
+.gameboard{
+    width: 80vw; 
+}
 
 .container {
     /* display: flex; */
+    width: 13%; 
     flex-direction: row;
     flex-wrap: nowrap;
     height: 200px;
